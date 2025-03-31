@@ -1,0 +1,168 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="System1_GetClientDetails" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_strTaxID" Type="OutArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>System1_GetClientDetails_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="This workflow extracts vendor information, including the Tax ID, from the ACME System 1 Work Items Details page. It parses the Tax ID from the vendor information and outputs it for further processing.&#xA;&#xA;Variables:&#xA;strVendorInformation - Holds the complete vendor information string retrieved from the details page.&#xA;&#xA;Argument:&#xA;out_strTaxID - Stores the extracted Tax ID for further processing in downstream workflows." DisplayName="System1_GetClientDetails" sap:VirtualizedContainerService.HintSize="880.6666666666666,1362.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="502,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Starting System 1 Get Client Details&quot;]" />
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Navigate to and interact with the Work Items Details page in ACME System 1 to extract vendor details." AttachMode="ByInstance" CloseMode="Never" DisplayName="Work Items Details" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="502,1084.6666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="IfNotOpen" ScopeGuid="f7cf7aee-1c38-4fa3-827b-4b4e21e1b5e5" Timeout="1" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence sap2010:Annotation.AnnotationText="Extract the complete vendor information from the details page and save it in the VendorInformation variable." DisplayName="Do 'Vendor Information'" sap:VirtualizedContainerService.HintSize="468,797.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="strVendorInformation" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGetText DisplayName="Get 'Vendor Information'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,191.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="f7cf7aee-1c38-4fa3-827b-4b4e21e1b5e5" TextString="[strVendorInformation]" Version="V4">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/work-items/105309200" ContentHash="Z_xOzairo0q9byr0hwJ1fQ" DesignTimeRectangle="256, 638, 560, 120" DesignTimeScaleFactor="1.5" ElementType="Text" FuzzySelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Work Items' /&gt;&lt;webctrl tag='P' innertext='                             TaxID: RO657483                             Name: Clipboard Papers                             Address: Strada Agrafei 67                             City: Brasov, Romania                         ' /&gt;" Guid="99fbe148-33bb-4d86-bc49-4885ed664d03" ImageBase64="" InformativeScreenshot="368352ba49e0fe4a114992814183208a.png" Reference="-wi1GIjKWEudOGk8AJxI1w/46YnYVuI7kuLcKDEaen2Sw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="FuzzySelector" Version="V5" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="977043d5-ff59-49f3-ba70-f77564b4ead4" CvTextArea="252, 594, 231, 24" CvTextArgument="Vendor Information" CvType="Text" DesignTimeRectangle="256, 593, 560, 30" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='H4' type='' class='' aaname='Vendor Information' check:innerText='Vendor Information' /&gt;" Guid="6e6e4009-3b62-4fc6-8fc0-a221a3029e37" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,179.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Vendor information successfully retrieved: &quot; + strVendorInformation]" />
+            <Assign sap2010:Annotation.AnnotationText="Parse the Tax ID from the retrieved vendor information string." DisplayName="Assign 'TaxID'" sap:VirtualizedContainerService.HintSize="434,147.33333333333334" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[out_strTaxID]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[strVendorInformation.Substring(strVendorInformation.IndexOf("TaxID: ") + "TaxID: ".Length).Split(Environment.NewLine.ToCharArray)(0)]</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+            <ui:LogMessage DisplayName="Log 'TaxID'" sap:VirtualizedContainerService.HintSize="434,171.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;TaxID extracted successfully: &quot; + out_strTaxID]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-11, -11, 1942, 1102" BrowserType="Chrome" ContentHash="xASOMcHgrkaQWGdRgpwTHA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAA9MSURBVGhDxZkJeFRVlsfTDaOMgCRsCSGVfa/sC1kJWTALRJJWoUODgCKCOgPNpgw0BD5FRIIJYQkEQhIQlREmbCLdLLE1gmFLI7K0imEJyJoiCUJCwjt9zrn3vqqKkXZ67J77ff/vLPcV9fvfe9+rB9j8EqN75062OQ49x73ubcgvDfSoOBobVPvtwBDTteQIuJYcCd8mhJqOxATUVoT5VL7uZchP62Ob7dTlEVf58f+fQdATDfZTKkK8KxWoiBZ5kqqFriaFS2GeGKbti/CtGWHfa+y/1AyBz3R1zP1mYHD9taRwjcEQxioSOEFKUNVTtcjD4ftBodrVRDSEKvBxKf2nG5np2g/B1dEQEDoYinuDCFCs9PeYMyTlElTkYVwLqZxiGMxwcciVX/fLDVqZ/RHGGl49XkGCsY46qFxVBaTA9XqQ6ofBlYQQNIiRFco1xeooY+0vthsj7HuP/To+2GReyTABpINawkopqIRQzRJS7w8kUMoRmsHNusxzoXA6NtCU2qtHtsT4xwZtp4JVYGo1CU5EBKQoARlSrqSIApTALhMk58FoDKOCTgjhXEjlGAeGwDSD/T92pKY7O+Rarq4ZxiInAIxq1TiXIDwnc8ve5fhgNIJwFBGQYp3MKdbFWeQioom+/zsT9GhT2/zQbZdRAIoV45yAVKSeApJ9BlN9BCZIswS00iVSbJA2wt5urMR7+KCb50xMYD0D0rbjl/K2U20hfRVlxC8TOYFhVJB1cUFiJSkSlIrtxKDtclac0Mko/3qnR//t79/Y1VH+tVarSECUSyDLyLkCtJS+iu1rCRgbqOmAlEvIizGUB2EuZFlfjAnQdgd71UjMjgfdMPoqkizArQHNMKwOVpXgVBSABKIiAiH4RYseAYqa5sxRKJB1Aa/5vcF+vsS1Ho/0fsx1ydRE82oiFP4h6oaSQOac5jgqIVBdehw0lBRB8/Ej0HrlMuijtRG0hqPw4HwetNUMg7bqCFQ4tH4RprV9ES5qiirHuTZ9jnNdN/cGmWy7dbKV2ObhOimsLKEsG44PiZSwFnAMKIHlKlmu6vfPpDP0zx3a9Z1oJFNChWqtX4RorYdCEFiCVnMfDVIvlHPRE/Xc8Q7Wu/BIr8dcw957CsJRL72RqoPRNltDC9FWs3BLTQWL4UFjo0QT44pJg11/aYG1lc1QjPrk7H34+vs2OStHWyPuyNsIFIKgwRwFrKpRh6gnhAZRQdy/+acA613omeA8LmRTlha6KRvCNv0Gdg+PkoDinFqdRTqrmNN5vL1ulaQRY2dNC0wquwORubdhwPwGjpHzpTDPKmjCa+7Lq8V4cKlIgUHboWDMMWL+gMBljvNi7mAAmqI8CCb/tvcUiW9j47swqSbk3SyN4MnImLfTBayEvhBN0BiVYgKhvuAtiUAr/gAmlgrwCAkcQbkU9ylKU3QtfUYN3AmGEgrE4xQoYTGiKHKOvdZDRu7vW+layfB0fII3DtOC0UDou9kQgqK4YmKcdiHaqOFKMzDl52Vdl52qqWNDIE/mN1oBh88zS+9ZzJPoM7oJvMnbjqcjpFFrPUiAAZgHILA5bztI0Yjy13u2XX9ta/N4uH1WyMYsaK+4kmFwKiFQOx9F4GQiACiej/LXmnZtE1+M48X1TQhqspCADbPqmcw1zql6An5WDa3hsIRGQBbBGrH2oxoNYE2RTHDtD2MyeoyzcfydMT94wzAQyuJIBoI2PKm99Z8DdejaKCPURhuh7jep8isBduCZJ5COJUx0LPPcjuMt8k/D+/pwtA4n5KdHNILRF81Q7staOrlvgY3HrJjKoPJhEFj+pGZpIrA8U6N+9RMhwPBSt95ZJL8OYOjSBgidazILgazqn5LFdS9Y7MKDiyskNAJ+7qOR2khYy57FnC9sXeS0zcYvL6U2qPxJ6EiBZZnayIUpWm2kn/YdqnaAP9w7dpi/7Cw+FkMQgEQgKn+46jvomfR7QbtdzYAILXTQh6Fbq7zICPa8sfZCeKq94dwWt1qbgLKhWlAZAqMCWZmcU59y6u3ICmUD36EBdfMeOH0fghGI9QcZJaCIlj3LPka6HqWu2a6OUXMdAnozaNvnXhZRqLXKU0MzHNs+94QbH7uZbAJLMyGgFGEx/pRSCtPhuwhf7Vy4jya+CaDowD0IQgglBWvV6yBX8Jb9Vfvvyj8V74MqTwJEeTCkUmuVu9ZW5cHz3KMco42xdIgWgJDWGgoB61GYG9cP0fxRBeOj4Vy4r26AvlRBWCrwIXX7uYCZ58FzeAnEp/8O4uPjwdnZGZz799Liwvppz2UZYPNCF7i1xx1hpT73ICPQ+pkbmsOIuY3fijST//oMzUjAKMopGkuGcE19/5IMbUBROpyI88eXtDo2sO14MwTOQYg5tzgSHEfLvF1U1/pP+xpckqZBH4f+0KtXL7C1tYXevXtz7NGjB0c7OzvuOfS1g1fH2MOVnS4I7oq74IbgqM9c0ZQb2Hi+nVhLkCQ/BNXBMSpRnzRrShzcPVrNBi7jjUdAQgKuY1nPeY3eAv1dvRmuT58+HLt37w6PP/44Q1MkEzRH5nr27Ml9g6Md7MxzYvDWz5w10rf/3b/WxumVsAr/dUNwlQWs/7oMq9xvXbpG4j5ed3RLMRugMW5dAxgRyoiQIv60/GffALeMBeDg4AD9+4uVV+C04iSqSZQTOF1D6tu3rzKrvTPVAC1/dobWTw3avkL7ShuHHP98ASdg2YysSb5r09AAxXSNlJOfJfEBKo61IBjCESBDKtgfyyunHBwdHXk1CZDACZZWWxmhXNVdu3blXJkg03SPuLm54b1Bu2CApf/Ro8CmR0z/cQTJoGvTgcRm1iqJnpCoq6+ckBYAxq5tBD8EVCJYv9k3dXDqBUzaD/0cnXgVFTQBKxMkMkYrTZFE0GoXKNrb24OLiwsbcDY4QlWxGwyL75Jl0+nfO9syXHE6+BSnsglfztEURktRj65JeX8sNLbcYQN19Q9g8Nsm8EVoAvf9LxHN+S1IHjWP4QlMgasV79atG++Ip6cn+Pv7g7e3N4SGhkJkZCT4+vqCwWBgE/R52kHaBQ8PD5g9KUJzte8k/pJvmB5Z6VucJkHTwGdNKsJjvUb1RJ9r2Vt4sIgN0CATY9Y2MHB7RS24DuNfeIFXkaSOj1p9Wtng4GBITU2FzMxMGDp0KDzzzDMwfPhwzrOzs9mY5S6EhYVBTs5vNTTfjw3YpjhP8UEwJe/VT2jmOtWqz3OrRW/50Y3Sghj/c7QZkhfXgzeC+6Aovlz8HSQkJPzIAK2+k5MTREdHQ1ZWFowZMwZGjx4N48ePh3nz5sGCBQsgNzcXpk+fzvO0+vQAMBqNbGrx4sUwePDgSWzg110623rmJ5m8EI7EgBKSorcUzVG07NFONDaL46TGmcttsPdUCxTu/QG2762GmJgY/bFI4CQ67xEREZCRkQEjR46El19+Gd544w1Yvnw5FBYWwvr162Hjxo1QVFQEBQUFEBsby0eHjtb8+fOhpqYGNm/evIcN0OiZ6Z6roLyLELZosOZd9ATmKOx5ytpzFUZZe8n5Qe+O0rae/aPEtx4fffQRDBkyhJ8iJDoGZICOQnJyMowaNQqmTZsGeXl5DK9iaWkpfPjhh7Bz50744IMP4M0334T8/HxYtGgRfPLJJ3Djxg24cOHCbYkvdsE9L7FegXmtQlHkfLBVTdB6TXOyTtw4GhZWFcEXl/8ClxqvsoE7d+7AsmXL9OOSlob3EN6cdK5zcnJg9uzZMHfuXJg4cSLneCz4/K9cuRK2bNkCJSUlvDPbtm2D+/fvw61bt+D27dvQ0NAAV69ebZb4YtgNdc/FFWYYj1Upmg7OUUnUHitpnndEz6nvuVKIehSb7t7RDhw4AElJSXxUSARJmjJlCp9lMjhnzhx4//33uSYzmzZtgu3bt8OSJUvg2Wef5Z1sbW0Fk8nE8GTCagfUMMyKqlEQSgrec2WKlOV8+9qylwJ/vfItr9rUqVPhxRdf5CMzYsQIvmlnzpzJgLS6dCx27doF5eXlHA8dOgRffvklHyEyePHiRbh37x7DKx05cuSsxDaPzj27uLotSTB5rEgBJQKxjO4rkjURkzTKCZaiUBLPKW07+UetubmZYQhk8uTJMGnSJDZDBuhcb926FY4dOwYnT57km/PMmTNw+PBhqK2thePHj8OePXvg+vXrcPfuXWjEv480NTVxxF3aJrGtR/cBDuPclidpJAGSLIX5cowkrN0xmq8Rc1TrfYxz9+XzdpMJWjU6JnR0XnnlFd0APk3YwOnTp+HUqVOwb98+qKysZAM3b96Eb775Bq5du8Y7QPBKzz//vHiMdjR6ZrjPJ5CO5FaYqEPq/cKkH11HStkwhsHp7P7www9shm5KMjBjxgzdAB2ZEydOwMGDB6G4uBg+/fRTOHv2LJw7dw6++uor3gFLA7QD+CR7+D+322a45jIYyhWh3WQkERznyzAvJFNJLH1e1hQ/+uoAG6ivr+djsGbNGn7uv/baa7B06VIoKyvjVaddoCNDN/Dq1atZO3bsYGP0efosPdXIAO5kx8en/XgsoHe281vxJgTVId2WJYHLskEIP0ijXPXc8Brqk6imz1CeVD5au93UwDugaRoDvoCvF7NmzdJ/vOhGJng6Rnhzcr1u3To+SnSE6LMET8KHQjP+pjhJxL8/Ott1cXWaF1XLgAUIXiAj1gyJuUtBAkrM6dLnE7SCrRPg448/5l9Xgn/uuef4B4wen/TopP7u3bvZ3HvvvcfwGzZs4JwMWB4ffJL9vP9uaj96pLvkKjBnhHItGMSgzvmUi6hyl3wxR4pbGQ3n99jB3pIUPvuJiYn8KJ0wYQK/65AJuhfIBL1CkKqqqviJRI9XuoHp+BA8/th1/B8cP3fQbvQa6VNKoARpKcPSgWzAkD+Q5zDn/trN+BeQ/Y9qrfu7wNFyLxiaNpBf0J5++mn+0Xr11Vdh4cKFfObJBO0Ivf/QvVFdXQ0tLS30o9WA702ZEuP/PshIt0iHcf1mhNcQOAO/k6BL9BIgdkU0wZu171G4vLWb9vrvY+Gpp55iE/SbQG+gq1at4mNDx4jehegd6NKlS1BRUbETz7xBfvUvP8gM3ey22e75fV4KrHT8w4BaMuGUF6998GF/uLG9s+nrTZ1rtyzoXJH3Uqf8Z9N+Nda2669s8e00wc/PLxdft3fjK8ZZfIVuwnefJlz5v+Ib6W48bvPxLTRBfk0Hw8bmb5mdVz8DP8ovAAAAAElFTkSuQmCC" InformativeScreenshot="4bb9a11516eab02380fe6d698531e96b.jpg" Reference="-wi1GIjKWEudOGk8AJxI1w/Q2b3y5KB602UmtSrNo7Lew" Selector="&lt;html app='chrome.exe' url='*' /&gt;" Url="*" Version="V2" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
