@@ -113,7 +113,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:LogMessage DisplayName="Log 'Added to Queue'" sap:VirtualizedContainerService.HintSize="382,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Item Added to Queue: &quot; + Row.Item(&quot;WIID&quot;).ToString]" />
-            <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Adds the current DataTable row to the specified Orchestrator queue as a new transaction item." DisplayName="Add Queue Item 'WI4Items'" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="382,266" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="[in_QueueName]">
+            <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Adds the current DataTable row to the specified Orchestrator queue as a new transaction item." DisplayName="Add Queue Item 'WI4Items'" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="382,266" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="[in_QueueName]" Reference="[Row.Item(&quot;WIID&quot;).ToString]">
               <ui:AddQueueItem.ItemInformation>
                 <InArgument x:TypeArguments="x:String" x:Key="WIID">[Row("WIID").ToString]</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="Type">[Row("Type").ToString]</InArgument>
